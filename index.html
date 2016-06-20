@@ -167,39 +167,45 @@
             </div><!-- /input-group -->
           </div><!-- /.col-lg-6 -->
 
-
-          <div class="search-table table-responsive table-bordered hidden">
-          </div>
-
-          <div class="meal-table table-responsive table-bordered hidden">
-            <table class="table table-condensed">
-              <tr>
-                <th class='hidden'>id</th>
-                <th>Description</th>
-                <th>Calories</th>
-                <th>Grams Per Serving</th>
-                <th>Fat Mono</th>
-                <th>Fat Poly</th>
-                <th>Fat Sat</th>
-                <th>Carbs</th>
-                <th>Sugar</th>
-                <th>Fiber</th>
-                <th>Protien</th>
-                <th>Sodium</th>
-                <th>Cholesteral</th>
-              </tr>
-            </table>
-
-
-
-          </div>
-
           <div class="jumbotron">
             <div class="container">
               <h1 class='landing-header'>Fitness Food Tracker</h1>
               <h3>An App For Tracking Your Calories and Maintaining Your Physique.</h3>
             </div>
           </div>
+        </div>
+          <div id="meal-content" class='hidden'>
+            <ul id="tabs" class="nav nav-tabs" data-tabs="tabs">
+                <li class="active"><a href="#red" data-toggle="tab">Search Results</a></li>
+                <li><a href="#orange" data-toggle="tab">Your Meal</a></li>
+            </ul>
+            <div id="my-tab-content" class="tab-content">
+                <div class="tab-pane active" id="red">
+                  <div class="search-table table-responsive table-bordered hidden">
+                  </div>
+                </div>
+                <div class="tab-pane" id="orange">
+                  <div class="meal-table table-responsive table-bordered hidden">
+                    <table class="table table-condensed">
+                      <tr>
+                        <th class='hidden'>id</th>
+                        <th>Description</th>
+                        <th>Calories</th>
+                        <th>Grams Per Serving</th>
+                        <th>Fat Mono</th>
+                        <th>Fat Poly</th>
+                        <th>Fat Sat</th>
+                        <th>Carbs</th>
+                        <th>Sugar</th>
+                        <th>Fiber</th>
+                        <th>Protien</th>
+                        <th>Sodium</th>
+                        <th>Cholesteral</th>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+            </div>
         </div>
         <div class='col-md-4 icon-div'>
           <i class="material-icons icon">create</i><br>

@@ -2,7 +2,8 @@
 
 const appApi = require('./api.js');
 const appUi = require('./ui.js');
-const displayFoodForMeal = require('../templates/display-food-added-to-meal.handlebars')
+const displayFoodForMeal = require('../templates/display-food-added-to-meal.handlebars');
+const app = require('../app-data.js');
 
 const addHandlers = () => {
   $('#food-search-btn').on('click', function(event){
@@ -40,6 +41,7 @@ const addHandlers = () => {
     });
     $('.meal-table').removeClass('hidden');
     $('.meal-table > table').append(displayFoodForMeal({food}));
+    app.foods.push(food);
     console.log(food);
   });
 

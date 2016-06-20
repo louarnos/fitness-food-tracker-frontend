@@ -21,7 +21,11 @@ body {
   background-size: cover;
   position: relative;
   margin-top: 5%;
-  min-height: 600px;
+  height: 600px;
+}
+
+#meal-content {
+  margin-top: 8%;
 }
 
 .landing-header {
