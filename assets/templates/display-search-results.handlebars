@@ -1,0 +1,45 @@
+<table class="table table-condensed">
+  <tr>
+    <th class='hidden'>id</th>
+    <th>Description</th>
+    <th>Calories</th>
+    <th>Grams Per Serving</th>
+    <th>Fat Mono</th>
+    <th>Fat Poly</th>
+    <th>Fat Sat</th>
+    <th>Carbs</th>
+    <th>Sugar</th>
+    <th>Fiber</th>
+    <th>Protien</th>
+    <th>Sodium</th>
+    <th>Cholesteral</th>
+    <th>Add</th>
+    <th>Qty</th>
+  </tr>
+  {{#each foods}}
+    <tr>
+      <td class='hidden' data-item="id">{{this.id}}</td>
+      <td data-item="description">{{this.description}}</td>
+      <td data-item="calories">{{this.calories}}</td>
+      <td data-item="grams_per_serving">{{this.grams_per_serving}}</td>
+      <td data-item="fat_mono">{{this.fat_mono}}</td>
+      <td data-item="fat_poly">{{this.fat_poly}}</td>
+      <td data-item="fat_sat">{{this.fat_sat}}</td>
+      <td data-item="carbs">{{this.carbs}}</td>
+      <td data-item="sugar">{{this.sugar}}</td>
+      <td data-item="fiber">{{this.fiber}}</td>
+      <td data-item="protein">{{this.protein}}</td>
+      <td data-item="sodium">{{this.sodium}}</td>
+      <td data-item="choles">{{this.choles}}</td>
+      <td>
+        <button type="button" id='add-food-btn' class="btn btn-primary add-food-btn" aria-label="Left Align">
+          <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        </button>
+      </td>
+      <td>
+        <div class="input-group input-group-sm">
+          <input type="text" id="qty-input" class="form-control" placeholder="Qty" aria-describedby="sizing-addon3">
+        </div>
+    </tr>
+  {{/each}}
+</table>

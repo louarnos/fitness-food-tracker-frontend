@@ -1,2 +1,100 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+$orange: #EB8921;
+$lite-orange: #F5AD28;
+$white: #FFFFFF;
+$gray: #2E2F2F;
+$darker-gray: #1E1E1E;
+$black: #000000;
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color:  $gray;
+  color: $lite-orange;
+};
+
+.landing {
+  background-image: url("http://wallpapercave.com/wp/EnDM8YS.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  margin-top: 5%;
+  min-height: 600px;
+}
+
+.landing-header {
+  color: $orange;
+}
+
+.icon-div {
+    text-align: center;
+    background-color: $gray;
+}
+
+.icon {
+  padding-top: 10%;
+  font-size: 8em;
+  color: $white;
+  margin-bottom: 5%;
+}
+
+.jumbotron {
+  background: rgba(0, 0, 0, 0);
+  text-shadow: .25px 0 0 $black, -.25px 0 0 $black, 0 .25px 0 $black, 0 -.25px 0 $black, .25px .25px $black;
+  padding-top: 10%;
+  padding-bottom: 30%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10%;
+}
+
+.btn-primary {
+  background: $orange;
+  border-color: $black;
+}
+
+.table-responsive {
+  max-height: 400px;
+  overflow: auto;
+  font-size: .75em;
+  margin-left: 5%;
+  margin-right: 5%;
+  background-color: $darker-gray;
+  margin-bottom: 10%;
+}
+
+.input-group-sm {
+  min-width: 50px;
+}
+
+.search-input {
+  margin-bottom: 10%;
+  padding-top: 10%;
+  float: none;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.add-food-btn {
+  border-radius: 100%;
+}
+
+.table {
+  border: $black;
+}
+
+.a.dropdown-toggle {
+  padding: 0 !important;
+}
+
+.brand {
+  height: 100%;
+  margin: 5%;
+}
+
+.navbar-brand {
+  padding: 0;
+  margin-bottom: 5%;
+}

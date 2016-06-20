@@ -1,20 +1,240 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Fitness Food Tracker</title>
 
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
+      <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     </head>
     <body class="container-fluid">
-      <h1>Example</h1>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img class="brand" alt="Brand" src="assets/styles/apple.png"></a>
+          </div>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-      eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-      minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-      ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-      est laborum.</p>
+    <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">One more separated link</a></li>
+                </ul>
+              </li>
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#">Link</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="material-icons">account_circle</i> <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#" id="nav-sign-up">Sign Up</a></li>
+                  <li><a href="#" id="nav-sign-in">Sign In</a></li>
+                  <li class="hidden" id="nav-li-sign-out"><a href="#" id="nav-sign-out">Sign Out</a></li>
+                  <li class="hidden" id="nav-li-change-password"><a href="#" id="nav-change-password">Change Password</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+      </nav>
+
+
+      <div class="landing-container">
+        <div class='landing'>
+
+
+          <!--- Sign Up Form ---->
+          <form class="form-horizontal hidden" id=sign-up-form>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" name="credentials[email]" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" name="credentials[password]" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Confirm Password</label>
+              <div class="col-sm-6">
+                <input type="password" name="credentials[password_confirmation]" class="form-control" id="inputPassword3" placeholder="Password Confirmation">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign Up</button>
+              </div>
+            </div>
+          </form>
+
+
+          <!-- Update User -->
+
+          <form id='update-user-form' class='hidden'>
+            <div class="form-group row">
+              <label for="weight-input" class="col-sm-2 form-control-label">Weight</label>
+              <div class="col-sm-10">
+                <input type="" class="form-control" id="weight-input" placeholder="Enter Your Weight">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="height-input" class="col-sm-2 form-control-label">Height</label>
+              <div class="col-sm-10">
+                <input type="" class="form-control" id="height-input" placeholder="Enter Your Height">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="age-input" class="col-sm-2 form-control-label">Age</label>
+              <div class="col-sm-10">
+                <input type="" class="form-control" id="age-input" placeholder="Enter Your Age">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="gender-input" class="col-sm-2 form-control-label">Gender</label>
+              <div class="col-sm-10">
+                <input type="" class="form-control" id="gender-input" placeholder="Enter Your Gender (m or f)">
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="activity-input" class="col-sm-2 form-control-label">Activity Level</label>
+              <div class="col-sm-10">
+                <input type="" class="form-control" id="activity-input" placeholder="Enter Acitivty Multiplier">
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary auth-form-element" >
+              Submit Your Info
+            </button>
+          </form>
+
+          <!-- Sign In form -->
+          <form class="form-horizontal hidden" id=sign-in-form>
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+              <div class="col-sm-6">
+                <input type="email" class="form-control" name="credentials[email]" id="inputEmail3" placeholder="Email">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-6">
+                <input type="password" class="form-control" name="credentials[password]" id="inputPassword3" placeholder="Password">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign In</button>
+              </div>
+            </div>
+          </form>
+
+
+
+          <div class="col-md-6 search-input hidden">
+            <label>Search For Food</label>
+            <div class="input-group">
+              <input type="text" id='search-input-field' class="form-control" placeholder="Search for foods">
+              <span class="input-group-btn">
+                <button class="btn btn-primary" id='food-search-btn' type="button">Search!</button>
+              </span>
+            </div><!-- /input-group -->
+          </div><!-- /.col-lg-6 -->
+
+
+          <div class="search-table table-responsive table-bordered hidden">
+          </div>
+
+          <div class="meal-table table-responsive table-bordered hidden">
+            <table class="table table-condensed">
+              <tr>
+                <th class='hidden'>id</th>
+                <th>Description</th>
+                <th>Calories</th>
+                <th>Grams Per Serving</th>
+                <th>Fat Mono</th>
+                <th>Fat Poly</th>
+                <th>Fat Sat</th>
+                <th>Carbs</th>
+                <th>Sugar</th>
+                <th>Fiber</th>
+                <th>Protien</th>
+                <th>Sodium</th>
+                <th>Cholesteral</th>
+              </tr>
+            </table>
+
+
+
+          </div>
+
+          <div class="jumbotron">
+            <div class="container">
+              <h1 class='landing-header'>Fitness Food Tracker</h1>
+              <h3>An App For Tracking Your Calories and Maintaining Your Physique.</h3>
+            </div>
+          </div>
+        </div>
+        <div class='col-md-4 icon-div'>
+          <i class="material-icons icon">create</i><br>
+          Log Your Meals
+        </div>
+        <div class='col-md-4 icon-div'>
+          <i class="material-icons icon">fitness_center</i><br>
+            Maintain Your Fitness
+        </div>
+        <div class='col-md-4 icon-div'>
+          <i class="material-icons icon">track_changes</i><br>
+          Track Changes Over Time
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </body>
 </html>
