@@ -11,7 +11,8 @@ $black: #000000;
 body {
   font-family: 'Montserrat', sans-serif;
   background-color:  $gray;
-  color: $lite-orange;
+  color: $orange;
+  padding-top: 5%;
 };
 
 .landing {
@@ -20,12 +21,44 @@ body {
   background-position: center;
   background-size: cover;
   position: relative;
+  min-width: 100%;
   margin-top: 5%;
   height: 600px;
+  display: block;
+  border-top: 3px solid $orange;
+}
+
+.fa-github {
+  color: $orange;
+  font-size: 10em;
+  text-align: center;
+  left: 50%;
+  position: relative;;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-github:hover {
+  color: $lite-orange;
+}
+
+form {
+  width: 50%;
+  margin-left: 30%;
+  padding-top: 10%;
+  display: block;
 }
 
 #meal-content {
   margin-top: 8%;
+  display: block;
+  clear: both;
+  min-height: 300px;
+}
+
+.below-landing {
+  display: block;
+  clear: both;
 }
 
 .landing-header {
@@ -33,8 +66,11 @@ body {
 }
 
 .icon-div {
-    text-align: center;
-    background-color: $gray;
+  text-align: center;
+  background-color: $gray;
+  padding-bottom: 5%;
+  display: block;
+  border-top: 3px solid $orange;
 }
 
 .icon {
@@ -66,7 +102,23 @@ body {
   margin-left: 5%;
   margin-right: 5%;
   background-color: $darker-gray;
-  margin-bottom: 10%;
+  margin-bottom: 2%;
+}
+
+.create-meal-input {
+  margin-top: 5%;
+}
+
+footer{
+  height: 500px;
+  background-color: $darker-gray;
+  border-top: 3px solid $orange;
+  clear:both;
+}
+
+.meal-label{
+  margin-top: 5%;
+  margin-left: 5%;
 }
 
 .input-group-sm {
@@ -74,11 +126,18 @@ body {
 }
 
 .search-input {
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   padding-top: 10%;
-  float: none;
   margin-right: auto;
   margin-left: auto;
+  float: none;
+}
+
+.search-placeholder {
+  padding-top: 10%;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .add-food-btn {

@@ -33,9 +33,15 @@ const signInSuccess = (data) => {
   $('#sign-in-form').addClass('hidden')
   $("#nav-li-change-password").removeClass('hidden');
   $("#nav-li-sign-out").removeClass('hidden');
+  $("#nav-li-user-stats").removeClass('hidden');
   $("#nav-sign-up").addClass('hidden');
   $("#nav-sign-in").addClass('hidden');
   $(".search-input").removeClass('hidden');
+  $('.jumbotron').removeClass('hidden');
+  $('#meal-content').removeClass('hidden');
+  $('html, body').animate({
+  scrollTop: $("#search-input-field").offset().top - 95
+}, 1000);
 };
 
 const changePWSuccess = (data) => {

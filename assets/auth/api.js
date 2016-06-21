@@ -45,23 +45,9 @@ const changePW = (success, failure, data) => {
   .fail(failure);
 };
 
-const updateUser = (success, failure, data) => {
-  console.log('update user stats queued');
-  $.ajax({
-    method: 'PUT',
-    url: app.api + '/users/' + app.user._id,
-    data,
-    headers: {
-      Authorization: 'Token token=' + app.user.token,
-    },
-  }).done(success)
-  .fail(failure);
-};
-
 module.exports = {
   signUp,
   signIn,
   signOut,
   changePW,
-  updateUser,
 };
